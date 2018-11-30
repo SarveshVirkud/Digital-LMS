@@ -1,0 +1,71 @@
+<html>
+   <head>
+      <title>Highcharts Tutorial</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {
+            var chart = {
+               plotBackgroundColor: null,
+               plotBorderWidth: null,
+               plotShadow: false
+            };
+            var title = {
+               text: 'Most searched books'   
+            };
+            var tooltip = {
+               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            };
+            var plotOptions = {
+               pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  
+                  dataLabels: {
+                     enabled: true,
+                     format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+                     style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor)||
+                        'black'
+                     }
+                  }
+               }
+            };
+            var series = [{
+               type: 'pie',
+               name: 'Browser share',
+               data: [
+                  ['Origin: Number 5 of the Robert Langdon Series',   10.0],
+                  ['Half Girlfriend',   15.0],
+                  ['Not without my daughter',   6.0],
+                  ['The Ministry of Utmost Happiness',       26.8],
+            /*    {
+                     name: 'You can win',
+                     y: 12.8,
+                     sliced: true,
+                     selected: true
+                }, */
+                  ['You can win',
+                    12.8],
+                  ['Wuthering Heights',    8.5],
+                  ['Malory Towers',     20.2],
+                  ['Others',   0.7]
+               ]
+            }];
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;     
+            json.tooltip = tooltip;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            $('#container').highcharts(json);  
+         });
+      </script>
+   </body>
+   
+</html>

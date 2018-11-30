@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Issue</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<h1>SNR</h1>
+							<p>Issuing the book</p>
+						</header>
+						<hr />
+						<h2>Issue a book</h2>
+						<form method="post" action="http://localhost/LMS/IssueBookController.php">
+							<div class="field">
+								<input type="text" name="name" id="name" placeholder="Name of book"/>
+							</div>
+							<div class="field">
+								<input type="text" name="BID" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<input type="date" name="date" id="pass" placeholder="Issue date" />
+							</div>
+
+							<ul class="actions">
+								<li>
+									<input type="submit" value="Issue" class="button">
+								</li>
+							</ul>
+						</form>
+						<hr />
+					</section>
+                </div>
+            <script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+    </body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LMS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="a.css" rel="stylesheet">
+    <script src = "https://code.highcharts.com/highcharts.js"></script> 
+    
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" data-spy="affix">
+	<div class="container-fluid">
+		<a class=navbar-brand href="#"><h3>SNR</h3></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<!--<li class="nav-item">
+					<a class="nav-link" href="index.html">About</a>
+				</li>-->
+				<li class="nav-link dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#222">About</a>
+					<ul id="abt" class="dropdown-menu">
+						<li>
+							<a href="index.html">Services</a>
+						</li>
+						<li>
+								<a href="new2.html">Books</a>
+							</li>
+						
+						<li>
+							<a href="new3.html">About Us</a>
+						</li>
+						<li>
+							<a href="#bottom">Contact Us</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Identity/login.html">Login/Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Main -->
+<div id="main-wrapper">
+    <div id="main" class="container">
+        <div class="row 200%">
+            <div class="12u">
+
+                    <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+                    <script language = "JavaScript">
+                       $(document).ready(function() {
+                          var chart = {
+                             plotBackgroundColor: null,
+                             plotBorderWidth: null,
+                             plotShadow: false
+                          };
+                          var title = {
+                             text: 'Most searched books'   
+                          };
+                          var tooltip = {
+                             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                          };
+                          var plotOptions = {
+                             pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                
+                                dataLabels: {
+                                   enabled: true,
+                                   format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+                                   style: {
+                                      color: (Highcharts.theme && Highcharts.theme.contrastTextColor)||
+                                      'black'
+                                   }
+                                }
+                             }
+                          };
+                          var series = [{
+                             type: 'pie',
+                             name: 'Browser share',
+                             data: [
+                                ['Origin: Number 5 of the Robert Langdon Series',   10.0],
+                                ['Half Girlfriend',   15.0],
+                                ['Not without my daughter',   6.0],
+                                ['The Ministry of Utmost Happiness',       26.8],
+                          /*    {
+                                   name: 'You can win',
+                                   y: 12.8,
+                                   sliced: true,
+                                   selected: true
+                              }, */
+                                ['You can win',
+                                  12.8],
+                                ['Wuthering Heights',    8.5],
+                                ['Malory Towers',     20.2],
+                                ['Others',   0.7]
+                             ]
+                          }];
+                          var json = {};   
+                          json.chart = chart; 
+                          json.title = title;     
+                          json.tooltip = tooltip;  
+                          json.series = series;
+                          json.plotOptions = plotOptions;
+                          $('#container').highcharts(json);  
+                       });
+                    </script>                
+
+                <!-- Features -->
+                    <section class="box features">
+                        <h2 class="major"><span>Best Sellers</span></h2>
+                        <div>
+                            <div class="row">
+                                <div class="3u 12u(mobile)">
+                            
+                               
+
+                                    <!-- Feature -->
+                                        <section class="box feature">
+                                            <a href="#" class="image featured"><img src="newly added\brown.jpg" alt="" /></a>
+                                            <h3>Origin: Number 5 of the Robert Langdon Series</h3>
+                                            <p>
+                                                Robert Langdon, Harvard professor of symbology and religious iconology, arrives at the Guggenheim Museum Bilbao to attend the unveiling of a discovery that "will change the face of science forever".
+                                            </p>
+                                            <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                        </section>
+
+                                </div>
+                                <div class="3u 12u(mobile)">
+
+                                    <!-- Feature -->
+                                        <section class="box feature">
+                                            <a href="#" class="image featured"><img src="newly added\ucan.jpg" alt="" /></a>
+                                            <h3>Who Says You Can’t? You Do</h3>
+                                            <p>
+                                                Do you want to change your life? Well, who says you can't? 
+Would you be surprised to learn that the only person stopping you achieving what you want in life is yourself? 
+                                            </p>
+                                            <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                        </section>
+
+                                </div>
+                                <div class="3u 12u(mobile)">
+
+                                    <!-- Feature -->
+                                        <section class="box feature">
+                                            <a href="#" class="image featured"><img src="newly added\asoka.jpg" alt="" /></a>
+                                            <h3>Ashoka: Satrap of Taxila</h3>
+                                            <p>
+                                                    Ashoka has been dispatched to accompany his brother Sushim to Taxila. But when he sees the brutality and disrespect to Mauryavansh by the Pashtun rebels, he cannot stay silent. His sword is as quick as his temper, and the result is swift and bloody justice. 
+                                            </p>
+                                            <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                        </section>
+
+                                </div>
+                                <div class="3u 12u(mobile)">
+
+                                    <!-- Feature -->
+                                        <section class="box feature">
+                                            <a href="#" class="image featured"><img src="newly added\happy.jpg" alt="" /></a>
+                                            <h3>The Ministry of Utmost Happiness</h3>
+                                            <p>
+                                                    The Ministry of Utmost Happiness takes us on a journey of many years – the story spooling outwards from the cramped neighbourhoods of Old Delhi into the burgeoning new metropolis and beyond, to the Valley of Kashmir and the forests of Central India, where war is peace and peace is war, and where, from time to time, ‘normalcy’ is declared.
+                                            </p>
+                                            <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                  <br><br>      </section>
+
+                                </div>
+                            </div> 
+                            
+                        </div>
+                    </section>
+
+            </div>
+        </div>
+
+        <div class="row 200%">
+                <div class="12u">
+    
+                    <!-- Features -->
+                        <section class="box features">
+                            <h2 class="major"><span>Paulo Coelho</span></h2>
+                            <div>
+                                <div class="row">
+                                    <div class="3u 12u(mobile)">
+                                
+                                   
+    
+                                        <!-- Feature -->
+                                            <section class="box feature">
+                                                <a href="#" class="image featured"><img src="newly added\pc1.jpg" alt="" /></a>
+                                                <h3>The Alchemist</h3>
+                                                <p>
+                                                        Paulo Coelho's enchanting novel has inspired a devoted following around the world. This story, dazzling in its powerful simplicity and inspiring wisdom, is about a shepherd boy who travels from Spain to Egyptian desert in search of a treasure buried in Pyramids.
+                                                   
+                                                </p><input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                            </section>
+    
+                                    </div>
+                                    <div class="3u 12u(mobile)">
+    
+                                        <!-- Feature -->
+                                            <section class="box feature">
+                                                <a href="#" class="image featured"><img src="newly added\pc2.jpg" alt="" /></a>
+                                                <h3>The Winner Stands Alone</h3>
+                                                <p>
+                                                        n 'The Winner Stands Alone', Paulo Coelho expresses his utter contempt for the natural working order of the world. The story is based on one day at the Cannes Film Festival. He explores the completely shallow lifestyles of the 'superclass'; the class of rich and famous.
+                                                </p>
+                                                <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                            </section>
+    
+                                    </div>
+                                    <div class="3u 12u(mobile)">
+    
+                                        <!-- Feature -->
+                                            <section class="box feature">
+                                                <a href="#" class="image featured"><img src="newly added\pc3.jpg" alt="" /></a>
+                                                <h3>The Fifth Mountain</h3>
+                                                <p>
+                                                        Based on the biblical figure prophet Elijah, the novel The Fifth Mountain narrates the life of the young prophet and his struggles with god. Stuck having to choose from his love and sense of duty, the story speaks about how he gets over his difficulties and follows his destiny.  
+                                                </p>
+                                                <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                            </section>
+    
+                                    </div>
+                                    <div class="3u 12u(mobile)">
+    
+                                        <!-- Feature -->
+                                            <section class="box feature">
+                                                <a href="#" class="image featured"><img src="newly added\pc4.jpg" alt="" /></a>
+                                                <h3>The Pilgrimage</h3>
+                                                <p>
+                                                        The Pilgrimage by Paulo Coelho is a parable from 1987 that delves into self-exploration and finding one's true path. The story begins in 1986, when the author fails his initiation into the order Regnus Agnus Mundi (RAM).
+                                                </p>
+                                                <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                       <br> <br> </section>
+    
+                                    </div>
+                                </div> 
+                                
+                            </div>
+                        </section>
+    
+                </div>
+            </div>
+
+            <div class="row 200%">
+                    <div class="12u">
+        
+                        <!-- Features -->
+                            <section class="box features">
+                                <h2 class="major"><span><br><br>Engineering books</span></h2>
+                                <div>
+                                    <div class="row">
+                                        <div class="3u 12u(mobile)">
+                                    
+                                       
+        
+                                            <!-- Feature -->
+                                                <section class="box feature">
+                                                    <a href="#" class="image featured"><img src="newly added\ee1.jpg" alt="" /></a>
+                                                    <h3>Introduction to Algorithms </h3>
+                                                    <p>
+                                                            It covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers. Each chapter is relatively selfcontained and presents an algorithm, a design technique, an application area, or a related topic.
+                                                    </p>
+                                                    <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                                </section>
+        
+                                        </div>
+                                        <div class="3u 12u(mobile)">
+        
+                                            <!-- Feature -->
+                                        <section class="box feature">
+                                                <a href="#" class="image featured"><img src="newly added\gate.jpg" alt="" /></a>
+                                                <h3>GATE Computer Science and Information Technology 2018</h3>
+                                                <p>
+                                                     This book has been prepared by a group of faculties who are highly experienced in training GATE candidates and are also subject matter experts. As a result this book would serve as a one-stop solution for any GATE aspirant to crack the examination.	
+                                                </p>
+                                                <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                            </section>
+        
+                                        </div>
+                                        <div class="3u 12u(mobile)">
+        
+                                            <!-- Feature -->
+                                                <section class="box feature">
+                                                    <a href="#" class="image featured"><img src="newly added\ee3.jpg" alt="" /></a>
+                                                    <h3>GATE Mechanical Engineering 2018</h3>
+                                                    <p>
+                                                            This book has been prepared by a group of faculties who are highly experienced in training GATE candidates and are also subject matter experts. As a result this book would serve as a one-stop solution for any GATE aspirant to crack the examination. The book is divided into three parts covering, (1) General Aptitude, (2) Engineering Mathematics and (3) Mechanical Engineering’.   
+                                                    </p>
+                                                    <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                                </section>
+        
+                                        </div>
+                                        <div class="3u 12u(mobile)">
+        
+                                            <!-- Feature -->
+                                                <section class="box feature">
+                                                    <a href="#" class="image featured"><img src="newly added\ee4.jpg" alt="" /></a>
+                                                    <h3>Data Warehousing: Fundamentals for IT Professionals</h3>
+                                                    <p>
+                                                            This book covers the fundamentals of Data Warehousing specifically for the IT professional who wants to get into the field. It covers every significant topic including planning requirements, architecture, infrastructure, design, data preparation, information delivery, implementation and maintenance.
+                                                    </p>
+                                                    <input type="button" onclick="location.href='Identity/issue.html';" value="Issue this book" />
+                                                </section>
+        
+                                        </div>
+                                    </div> 
+                                    
+                                </div>
+                            </section>
+        
+                    </div>
+                </div>
+    </div>
+</div>
+
+<!--Modal-->
+<div class="container">
+	
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+
+		
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Prime Benefits</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					
+				</div>
+				<div class="modal-body">
+					<ol>
+						<li>
+							Early access to E-Books.
+						</li>
+						<li>
+							Supports Multiple Devices at a Time.
+						</li>
+						<li>
+							Download Books Offline
+						</li>
+					</ol>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead">
+                Join Prime at as low as Rs. 100
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <button type="button" class="btn btn-outline-secondary btn-lg" title="Benefits of Prime" data-toggle="modal" data-target="#myModal">Explore Benefits</button>
+        </div>
+    </div>
+    <hr class="my-4">
+</div>
+
+
+
+<!--- Three Column Section -->
+<div class="container-fluid" padding>
+	<center><h3 class="my-4">Developed Using</h3></center>
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<h3>HTML5</h3>
+			<p>Build with the Latest version of HTML</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-bold"></i>
+			<h3>BOOTSTRAP</h3>
+			<p>Build with the Latest version of Bootstrap</p>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<i class="fab fa-css3"></i>
+			<h3>CSS3</h3>
+			<p>Build with the Latest version of CSS3</p>
+		</div>
+	</div>
+	<hr class="my-4">
+</div>
+
+<!--Collapsible Table-->
+<div class="container">
+    <center>
+        <h2>Developed By</h2>
+        <br>
+        <button type="button" class="btn btn-info" title="Developer Details" data-toggle="collapse" data-target="#demo">See Developers</button>
+    </center>
+</div>
+
+<div id="demo" class="collapse">
+    <div class="container">
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sarvesh</td>
+                    <td>Virkud</td>
+                    <td>virkud.sarvesh@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Necil</td>
+                    <td>Dabre</td>
+                    <td>necil.dabre@spit.ac.in</td>
+                </tr>
+                <tr>
+                    <td>Radhika</td>
+                    <td>Vartak</td>
+                    <td>radhika.vartak@spit.ac.in</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--- Connect -->
+<br>
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Connect with Us:</h2>
+        </div>
+        <a name="bottom"></a>
+        <div class="col-12 social padding">
+            <a href="https://www.facebook.com/login.php">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://myaccount.google.com/">
+                <i class="fab fa-google-plus-g"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--Tooltips-->
+<script>
+	$(document).ready(function () {
+		$('[data-toggle="collapse"]').tooltip();
+		$('[data-toggle="myModal"]').tooltip();
+	});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

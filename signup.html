@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<h1>SNR</h1>
+						</header>
+
+						<hr />
+						<h2>Sign Up</h2>
+						<form method="post" action="http://localhost/LMS/SignUpController.php">
+							<div class="field">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<input type="password" name="pass" id="pass" placeholder="Password" />
+							</div>
+							<div class="field">
+								<div class="select-wrapper">
+									<select name="department" id="department">
+										<option value="IT" selected>IT</option>
+										<option value="COMPS">COMP</option>
+										<option value="EXTC">EXTC</option>
+										<option value="ETRX">ETRX</option>
+									</select>
+								</div>
+							</div>
+							<!--<div class="field">
+								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+							</div>-->
+							<div class="field">
+								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+							</div>
+							<!--<div class="field">
+								<label>But are you a robot?</label>
+								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+							</div>-->
+							<ul class="actions">
+                                <li>
+                                    <input type="submit" value="Sign Up" class="button">
+                                </li>
+                                <li>
+                                    <a href="login.html" class="button">Login</a>
+                                </li>
+							</ul>
+
+						</form>
+						<hr />
+
+						<footer>
+							<ul class="icons">
+								<li><a href="#" class="fa-google">Google</a></li>
+								<!--<li><a href="#" class="fa-instagram">Instagram</a></li>-->
+								<li><a href="#" class="fa-facebook">Facebook</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; SNR</li><li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LMS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" data-spy="affix">
+	<div class="container-fluid">
+		<a class=navbar-brand href="#"><h3>SNR</h3></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="Lindex.html">Home</a>
+				</li>
+				<!--<li class="nav-item">
+					<a class="nav-link" href="index.html">About</a>
+				</li>-->
+				<li class="nav-link dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#222">About</a>
+					<ul id="abt" class="dropdown-menu">
+						<li>
+							<a href="Lindex.html">Services</a>
+						</li>
+						<li>
+								<a href="new2.html">Books</a>
+							</li>
+
+						<li>
+							<a href="new3.html">About Us</a>
+						</li>
+						<li>
+							<a href="#bottom">Contact Us</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Identity/login.html">Login/Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--- Image Slider-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="img/lib.png" alt="Mountains">
+			<div class="carousel-caption">
+				<h1 class="display-2">LMS</h1>
+				<h3>A Digital Library</h3>
+				<h1>Welcome User!<h1>
+			</div>
+		</div>
+
+		<div class="carousel-item">
+			<img src="img/bg.jpg" alt="">
+		</div>
+
+		<div class="carousel-item">
+			<img src="img/library.jpg" alt="">
+		</div>
+	</div>
+</div>
+
+<!--Modal-->
+<div class="container">
+
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Prime Benefits</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				</div>
+				<div class="modal-body">
+					<ol>
+						<li>
+							Early access to E-Books.
+						</li>
+						<li>
+							Supports Multiple Devices at a Time.
+						</li>
+						<li>
+							Download Books Offline
+						</li>
+					</ol>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<!--Price View-->
+<div class="demo">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6">
+				<div class="pricingTable">
+					<div class="pricingTable-header">
+						<h3 class="title">Standard</h3>
+						<div class="price-value">Rs.100
+							<span class="month">Per Month</span>
+						</div>
+					</div>
+					<ul class="pricing-content">
+						<li>10 Books Offline</li>
+						<li>Early-Access to new books</li>
+						<li>2 Accounts</li>
+						<li>1-Month</li>
+					</ul>
+					<a href="Identity/signup.html" class="pricingTable-signup">Join Now</a>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="pricingTable green">
+					<div class="pricingTable-header">
+						<h3 class="title">Premium</h3>
+						<div class="price-value">Rs.200
+							<span class="month">3-Month</span>
+						</div>
+					</div>
+					<ul class="pricing-content">
+						<li>20 Books Offline</li>
+						<li>Early Access to new books</li>
+						<li>5 Accounts</li>
+						<li>3-Month</li>
+					</ul>
+					<a href="Identity/signup.html" class="pricingTable-signup">Join Now</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="pricingTable skyblue">
+					<div class="pricingTable-header">
+						<h3 class="title">Extra</h3>
+						<div class="price-value">Rs.300
+							<span class="month">A Year</span>
+						</div>
+					</div>
+					<ul class="pricing-content">
+						<li>30 Books</li>
+						<li>Early-Access to new books</li>
+						<li>10 Accounts</li>
+						<li>12-Month</li>
+					</ul>
+					<a href="Identity/signup.html" class="pricingTable-signup">Join Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--- Jumbotron -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+			<p class="lead">
+				Join Prime at as low as Rs. 100
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+			<button type="button" class="btn btn-outline-secondary btn-lg" title="Benefits of Prime" data-toggle="modal" data-target="#myModal">Explore Benefits</button>
+		</div>
+	</div>
+	<hr class="my-4">
+</div>
+
+
+<!--- Three Column Section -->
+<div class="container-fluid" padding>
+	<center><h3 class="my-4">Developed Using</h3></center>
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<h3>HTML5</h3>
+			<p>Build with the Latest version of HTML</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-bold"></i>
+			<h3>BOOTSTRAP</h3>
+			<p>Build with the Latest version of Bootstrap</p>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<i class="fab fa-css3"></i>
+			<h3>CSS3</h3>
+			<p>Build with the Latest version of CSS3</p>
+		</div>
+	</div>
+	<hr class="my-4">
+</div>
+
+<!--Collapsible Table-->
+<div class="container">
+	<center>
+		<h2>Developed By</h2>
+		<br>
+		<button type="button" class="btn btn-info" title="Developer Details" data-toggle="collapse" data-target="#demo">See Developers</button>
+	</center>
+</div>
+
+<div id="demo" class="collapse">
+	<div class="container">
+		<br>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Sarvesh</td>
+					<td>Virkud</td>
+					<td>virkud.sarvesh@gmail.com</td>
+				</tr>
+				<tr>
+					<td>Necil</td>
+					<td>Dabre</td>
+					<td>necil.dabre@spit.ac.in</td>
+				</tr>
+				<tr>
+					<td>Radhika</td>
+					<td>Vartak</td>
+					<td>radhika.vartak@spit.ac.in</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!--- Connect -->
+<br>
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h2>Connect with Us:</h2>
+		</div>
+		<a name="bottom"></a>
+		<div class="col-12 social padding">
+			<a href="https://www.facebook.com/login.php">
+				<i class="fab fa-facebook"></i>
+			</a>
+			<a href="#">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a href="https://myaccount.google.com/">
+				<i class="fab fa-google-plus-g"></i>
+			</a>
+			<a href="#">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="#">
+				<i class="fab fa-youtube"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--Tooltips-->
+<script>
+	$(document).ready(function () {
+		$('[data-toggle="collapse"]').tooltip();
+		$('[data-toggle="myModal"]').tooltip();
+	});
+</script>
+
+</body>
+</html>
